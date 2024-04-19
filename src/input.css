@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+***************************
+|| FONTS                  |
+***************************
+*/
+@layer base {
+  /* font Whitney */
+  @font-face {
+    font-family: Whitney;
+    font-weight: 300;
+    src: url("../fonts/Whitney/Whitney-300.woff") format("woff");
+  }
+  @font-face {
+    font-family: Whitney;
+    font-weight: 400;
+    src: url("../fonts/Whitney/Whitney-400.woff") format("woff");
+  }
+  @font-face {
+    font-family: Whitney;
+    font-weight: 500;
+    src: url("../fonts/Whitney/Whitney-500.woff") format("woff");
+  }
+  @font-face {
+    font-family: Whitney;
+    font-weight: 600;
+    src: url("../fonts/Whitney/Whitney-600.woff") format("woff");
+  }
+  @font-face {
+    font-family: Whitney;
+    font-weight: 700;
+    src: url("../fFonts/Whitney/Whitney-700.woff") format("woff");
+  }
+  /* font Ginto-Nord */
+  @font-face {
+    font-family: GintoNord;
+    font-weight: 500;
+    src: url("../fonts/Ginto-Nord/Ginto-Nord-500.woff") format("woff"),
+      url("../fonts/Ginto-Nord/Ginto-Nord-500.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: GintoNord;
+    font-weight: 600;
+    src: url("../fonts/Ginto-Nord/Ginto-Nord-600.woff") format("woff"),
+      url("../fonts/Ginto-Nord/Ginto-Nord-600.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: GintoNord;
+    font-weight: 700;
+    src: url("../fonts/Ginto-Nord/Ginto-Nord-700.woff") format("woff"),
+      url("../fonts/Ginto-Nord/Ginto-Nord-700.woff2") format("woff2");
+  }
+  /* font Ginto */
+  @font-face {
+    font-family: Ginto;
+    font-weight: 300;
+    src: url("../fonts/Ginto/Ginto-300.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 300;
+    font-style: italic;
+    src: url("../fonts/Ginto/Ginto-300.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 400;
+    src: url("../fonts/Ginto/Ginto-400.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 400;
+    font-style: italic;
+    src: url("../fonts/Ginto/Ginto-400.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 500;
+    src: url("../fonts/Ginto/Ginto-500.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 500;
+    font-style: italic;
+    src: url("../fonts/Ginto/Ginto-500.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 600;
+    src: url("../fonts/Ginto/Ginto-600.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 600;
+    font-style: italic;
+    src: url("../fonts/Ginto/Ginto-600.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 700;
+    src: url("../fonts/Ginto/Ginto-700.woff") format("woff");
+  }
+  @font-face {
+    font-family: Ginto;
+    font-weight: 700;
+    font-style: italic;
+    src: url("../fonts/Ginto/Ginto-700.woff") format("woff");
+  }
+  /* gg sans */
+  /***************/
+  /*   gg sans   */
+  /***************/
+  @font-face {
+    font-family: "ggSans";
+    font-weight: 400;
+    src: url("../fonts/gg-sans/ggsans-Normal.woff") format("woff");
+  }
+  @font-face {
+    font-family: "ggSans";
+    font-weight: 500;
+    src: url("../fonts/gg-sans/ggsans-Medium.woff") format("woff");
+  }
+  @font-face {
+    font-family: "ggSans";
+    font-weight: 600;
+    src: url("../fonts/gg-sans/ggsans-Semibold.woff") format("woff");
+  }
+  @font-face {
+    font-family: "ggSans";
+    font-weight: 700;
+    src: url("../fonts/gg-sans/ggsans-Bold.woff") format("woff");
+  }
+}
+
+/* components */
+
+@layer components {
+  .title__cta {
+    @apply font-GintoNord;
+  }
+  .title {
+    @apply font-ggSans;
+  }
+
+  .container {
+    max-width: min(90%, 75rem);
+    margin-inline: auto;
+  }
+
+  /* default btn */
+  .btn {
+    @apply inline-flex items-center py-[0.7em]  px-[1.4em] leading-relaxed bg-white rounded-full font-bold font-ggSans text-sm transition-all duration-200;
+  }
+  .btn:is(:hover, :focus, :active) {
+    @apply shadow-[0_8px_15px] shadow-[rgba(0,0,0,0.2)];
+  }
+
+  /* hiding main icon when nav bar is open mbl */
+  .nav__open .nav__logo__container {
+    @apply opacity-0;
+  }
+  /* navbar */
+  .nav__list {
+    @apply fixed xl:static right-full top-0 w-full xl:w-auto h-screen xl:h-auto overflow-auto xl:overflow-visible sm:max-w-[min(100%,22rem)] px-8 bg-white xl:bg-transparent xl:flex text-primary_black xl:text-white xl:gap-2 transition-all duration-300;
+  }
+  .nav__open .nav__list {
+    @apply right-0;
+  }
+  /* mobile site menu toggle container */
+  .nav__toggle__btn__container {
+    @apply w-[2rem] h-[2rem];
+  }
+  .toggle__menu {
+    @apply border-none w-[2rem] h-[2rem] bg-transparent xl:hidden;
+    /* border: none;
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: transparent; */
+  }
+
+  /* toggle btn icon container */
+  .menu__icon {
+    @apply h-full relative flex items-center justify-center z-[999];
+    /* height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+  /* toggle btn icon  */
+  .menu__icon > div,
+  .menu__icon::after,
+  .menu__icon::before {
+    @apply content-[''] w-4/5 h-1 bg-white rounded-[3px] transition-all duration-300;
+    /* content: "";
+    width: 80%;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+    transition: var(--TRANSITION);
+    transition-duration: 0.2s; */
+  }
+
+  .menu__icon::after,
+  .menu__icon::before {
+    @apply absolute;
+    /* position: absolute; */
+  }
+  .menu__icon::after {
+    @apply top-[20%];
+    /* top: 22%; */
+  }
+  .menu__icon::before {
+    @apply bottom-[20%];
+    /* bottom: 22%; */
+  }
+
+  /* toggle btn icon hover  */
+  .menu__icon:hover > div,
+  .menu__icon:hover::after,
+  .menu__icon:hover::before {
+    @apply bg-white;
+    /* background-color: var(--CLR-WHITE); */
+  }
+  .menu__icon:hover::after {
+    @apply top-[18%];
+    /* top: 18%; */
+  }
+  .menu__icon:hover::before {
+    @apply bottom-[18%];
+    /* bottom: 18%; */
+  }
+
+  /* nav bar open menu icon start here */
+  .nav__open .menu__icon > div {
+    @apply w-[7px] h-[7px] rounded-[50%];
+    /* width: 7px;
+    height: 7px;
+    border-radius: 50%; */
+  }
+  .nav__open .menu__icon::after {
+    @apply top-1/2 -translate-y-1/2 rotate-[135deg];
+    /* top: 50%; */
+    /* transform: translateY(-50%) rotate(135deg); */
+  }
+  .nav__open .menu__icon::before {
+    @apply bottom-1/2 translate-y-1/2 -rotate-[135deg];
+    /* bottom: 50%; */
+    /* transform: translateY(50%) rotate(-135deg); */
+  }
+
+  .nav__open .menu__icon > div,
+  .nav__open .menu__icon::after,
+  .nav__open .menu__icon::before {
+    @apply bg-black;
+  }
+}
