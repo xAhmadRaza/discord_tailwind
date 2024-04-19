@@ -1463,13 +1463,6 @@ video {
   }
 }
 
-@media (min-width: 640px) {
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
 @media (min-width: 768px) {
   .lg\:mb-12 {
     margin-bottom: 3rem;
@@ -1479,6 +1472,11 @@ video {
     padding-top: 7rem;
   }
 
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .lg\:text-\[3\.5rem\] {
     font-size: 3.5rem;
   }
@@ -1486,16 +1484,6 @@ video {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .lg\:leading-relaxed {
@@ -1636,9 +1624,8 @@ video {
     line-height: 1;
   }
 
-  .xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .xl\:text-\[40px\] {
+    font-size: 40px;
   }
 
   .xl\:text-inherit {
